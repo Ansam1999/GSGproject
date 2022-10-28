@@ -1,8 +1,8 @@
 import "./Styles.css";
 
-const Slider = () => {
+const Slider = ({ changeCover }) => {
   return (
-    <div className="slider">
+    <div className="slider" onClick={changeCover}>
       <text className="arrow">❯</text>
     </div>
   );

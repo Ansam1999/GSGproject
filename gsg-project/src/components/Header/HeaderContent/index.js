@@ -1,10 +1,12 @@
 import "./Styles.css";
 import LeftHeader from "./LeftHeader";
 import RightHeader from "./RightHeader";
+import { useState } from "react";
 
-const HeaderContent = () => {
+const HeaderContent = ({ headerStyle, openMenu }) => {
+  const [isblock, setblock] = useState({ openMenu });
   return (
-    <div className="header_content">
+    <div className={`${headerStyle} ${openMenu}`}>
       <LeftHeader />
       <RightHeader />
     </div>
